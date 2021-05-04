@@ -18,19 +18,19 @@ const quizData = [
   },
   {
     question: 'What is the name of Yoda’s home?',
-    a: 'answer a',
+    a: 'Tatouine',
     b: 'Dagobah',
-    c: 'answer c',
-    d: 'answer d',
-    correct: 'd',
+    c: 'Washington, DC',
+    d: 'Space, in general',
+    correct: 'b',
   },
   {
     question: 'Who built C-3P0?',
-    a: 'answer a',
+    a: 'Tony Stark',
     b: 'Anakin Skywalker',
-    c: 'answer c',
-    d: 'answer d',
-    correct: 'd',
+    c: 'Q',
+    d: 'Alfred',
+    correct: 'b',
   },
 ];
 
