@@ -24,7 +24,7 @@ body {
 }
 
 .header p {
-  justify-content: center;
+  align-items: center;
   padding-bottom: 25px;
 }
 
