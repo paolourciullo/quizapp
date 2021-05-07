@@ -17,6 +17,17 @@ body {
   margin: 0;
 }
 
+.header h1 {
+  font-size: 40px;
+  letter-spacing: 10px;
+  justify-content: center;
+}
+
+.header p {
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
 .quiz-container {
   background-color: #fff;
   border-radius: 10px;
