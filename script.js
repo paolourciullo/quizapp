@@ -40,7 +40,7 @@ const quizData = [
       "Which selector could refer to an html element with the class of 'sm-col'?",
     a: '#sm-col',
     b: '.sm, .col',
-    c: '[class~=col]',
+    c: '.sm-col',
     d: '.sm_col',
     correct: 'c',
   },
