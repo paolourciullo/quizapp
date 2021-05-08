@@ -43,7 +43,7 @@ _Structure_
 
 _Styling:_
 
-- [ ] Styles should be reminiscent of the demo versions. Feel free to use artistic licencse as long as the functionality doesn't suffer
+- [ X ] Styles should be reminiscent of the demo versions. Feel free to use artistic licencse as long as the functionality doesn't suffer
 
 _Functionality_
 
