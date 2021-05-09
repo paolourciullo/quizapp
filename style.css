@@ -40,6 +40,13 @@ body {
   padding: 4rem;
 }
 
+#advance {
+}
+
+#counter {
+  text-align: center;
+}
+
 h2 {
   padding: 1rem;
   text-align: center;
