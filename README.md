@@ -34,8 +34,8 @@ General instructions for all Pre-Work Projects can also be found in the Chingu V
 
 _Structure_
 
-- [ ] Header item that includes the name for the app, and tabs (if using)
-- [ ] Card that displays a trivia question and four multiple choice answers
+- [ X ] Header item that includes the name for the app, and tabs (if using)
+- [ X ] Card that displays a trivia question and four multiple choice answers
 - [ ] Place element that displays which question number the user is on and the total number of questions (ex. 'Question 1 / 10')
 - [ ] Display buttons for advancing to the next question once the current question has been answered
 - [ ] Display a message to the user that informs them if their answer was right or wrong
@@ -47,14 +47,14 @@ _Styling:_
 
 _Functionality_
 
-- [ ] The quiz should span at least 10 questions. Feel free to add more if you would like.
-- [ ] The page should not reload! Hardcode all of your questions/choices in your JS file and use DOM manipulation to insert text as you go
-- [ ] An array of questions/choices can be found in the `assets` folder of this repo _(filename is 'quizQuestions.js')_; feel free to copy/paste the array in your JS file
+- [ X ] The quiz should span at least 10 questions. Feel free to add more if you would like.
+- [ X ] The page should not reload! Hardcode all of your questions/choices in your JS file and use DOM manipulation to insert text as you go
+- [ X ] An array of questions/choices can be found in the `assets` folder of this repo _(filename is 'quizQuestions.js')_; feel free to copy/paste the array in your JS file
 
 _Upon Load:_
 
 - [ ] Load the first question and display the user's place as _Question 1 / 10_
-- [ ] Make sure the button used to advance questions is either not visible or not clickable until an answer is submitted
+- [ X ] Make sure the button used to advance questions is either not visible or not clickable until an answer is submitted
 
 _Considerations:_
 
