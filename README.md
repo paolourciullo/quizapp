@@ -36,7 +36,7 @@ _Structure_
 
 - [ X ] Header item that includes the name for the app, and tabs (if using)
 - [ X ] Card that displays a trivia question and four multiple choice answers
-- [ ] Place element that displays which question number the user is on and the total number of questions (ex. 'Question 1 / 10')
+- [ X ] Place element that displays which question number the user is on and the total number of questions (ex. 'Question 1 / 10')
 - [ ] Display buttons for advancing to the next question once the current question has been answered
 - [ ] Display a message to the user that informs them if their answer was right or wrong
 - [ ] Display a clear message to the user when the trivia session is done, and include the user's score
