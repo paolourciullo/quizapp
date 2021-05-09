@@ -100,6 +100,7 @@ const b_text = document.getElementById('b_text');
 const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
 const submitBtn = document.getElementById('submit');
+const counterEl = document.getElementById('counter');
 
 let currentQuiz = 0;
 
@@ -116,6 +117,7 @@ function loadQuiz() {
   b_text.innerText = currentQuizData.b;
   c_text.innerText = currentQuizData.c;
   d_text.innerText = currentQuizData.d;
+  counterEl.innerText = `Question ${currentQuiz + 1} of ${quizData.length}`;
 }
 
 function deselectAnswers() {
