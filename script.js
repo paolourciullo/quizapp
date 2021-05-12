@@ -142,6 +142,7 @@ submitBtn.addEventListener('click', () => {
   if (answer) {
     if (answer === quizData[currentQuiz].correct) {
       score++;
+      submitBtn.innerHTML = 'Correct, Next question!';
     }
 
     currentQuiz++;
