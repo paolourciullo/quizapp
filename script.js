@@ -9,6 +9,7 @@ const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
 const submitBtn = document.getElementById('submit');
 const counterEl = document.getElementById('counter');
+const contMessage = document.getElementById('contMessage');
 
 let currentQuiz = 0;
 
@@ -50,7 +51,9 @@ submitBtn.addEventListener('click', () => {
   if (answer) {
     if (answer === quizData[currentQuiz].correct) {
       score++;
-      submitBtn.innerHTML = 'Correct, Next question!';
+      contMessage.innerHTML = '✔ Correct!';
+    } else {
+      contMessage.innerHTML = '❌ Incorrect.';
     }
 
     currentQuiz++;
@@ -59,7 +62,7 @@ submitBtn.addEventListener('click', () => {
       loadQuiz();
     } else {
       quiz.innerHTML = `
-        <h2>You answered correctly at ${score} / ${quizData.length} questions correctly!</h2>
+        <h2>You answered ${score} out of ${quizData.length} questions correctly!</h2>
 
         <button onclick="location.reload()">Reload</button>
       `;
