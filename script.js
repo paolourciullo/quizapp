@@ -51,9 +51,13 @@ submitBtn.addEventListener('click', () => {
   if (answer) {
     if (answer === quizData[currentQuiz].correct) {
       score++;
+      contMessage.classList.remove('contMessageShow');
       contMessage.innerHTML = '✔ Correct!';
+      contMessage.classList.add('contMessageShow');
     } else {
+      contMessage.classList.remove('contMessageShow');
       contMessage.innerHTML = '❌ Incorrect.';
+      contMessage.classList.add('contMessageShow');
     }
 
     currentQuiz++;

@@ -39,6 +39,15 @@ body {
   padding: 4rem;
 }
 
+.contMessage {
+  visibility: hidden;
+}
+
+.contMessageShow {
+  visibility: visible;
+  background-color: #8e44ad;
+}
+
 #advance {
 }
 
