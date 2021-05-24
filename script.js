@@ -19,6 +19,7 @@ loadQuiz();
 
 function loadQuiz() {
   deselectAnswers();
+  submitBtn.disabled = true;
   const currentQuizData = quizData[currentQuiz];
 
   questionEl.innerText = currentQuizData.question;
@@ -73,3 +74,5 @@ submitBtn.addEventListener('click', () => {
     }
   }
 });
+
+// document.getElementById("myBtn").disabled;
