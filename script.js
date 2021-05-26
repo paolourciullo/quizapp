@@ -1,5 +1,5 @@
 // import external quiz data
-import quizData from '/quizQuestions.js';
+import quizData from './quizQuestions.js';
 
 // bring in elements
 const quiz = document.getElementById('quiz');
