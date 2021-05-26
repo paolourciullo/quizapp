@@ -1,5 +1,5 @@
 // import external quiz data
-import quizData from './quizQuestions.js';
+import quizData from '/quizQuestions.js';
 
 // bring in elements
 const quiz = document.getElementById('quiz');
@@ -11,6 +11,8 @@ const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
 const submitBtn = document.getElementById('submit');
 const counterEl = document.getElementById('counter');
+const quizResult = document.getElementById('result');
+const nextBtn = document.getElementById('next');
 const contMessage = document.getElementById('contMessage');
 
 // declare start point of quizData array
@@ -26,6 +28,12 @@ function loadQuiz() {
   deselectAnswers();
   // disable submit button
   submitBtn.disabled = true;
+
+  // reset message text & next button visiblity
+  quizResult.style.display = 'none';
+  contMessage.textContent = '';
+  nextBtn.disabled = true;
+
   // declare var for parsing through quiz data
   const currentQuizData = quizData[currentQuiz];
   // change elements innerText to show what is in quiz data
@@ -60,6 +68,11 @@ function getSelected() {
   return answer;
 }
 
+//Enable the submit button once user selects an answer
+$("input[name='answer']").click(function () {
+  submitBtn.disabled = false;
+});
+
 // add event listener to submit button
 submitBtn.addEventListener('click', () => {
   // set answer as return from getSelected
@@ -69,17 +82,26 @@ submitBtn.addEventListener('click', () => {
   if (answer) {
     // checks if answer is strictly equal to current quiz correct answer,
     if (answer === quizData[currentQuiz].correct) {
+      quizResult.style.display = 'block';
+      contMessage.textContent = '✔ Correct!';
+      //Since the result div is set to display none initially, styling has to be loaded from javascript
+      contMessage.style.textAlign = 'center';
+      nextBtn.disabled = false;
       // if yes, increase score by 1, show correct
       score++;
-      contMessage.classList.remove('contMessageShow');
-      contMessage.innerHTML = '✔ Correct!';
-      contMessage.classList.add('contMessageShow');
     } else {
-      // show incorrect
-      contMessage.classList.remove('contMessageShow');
-      contMessage.innerHTML = '❌ Incorrect.';
-      contMessage.classList.add('contMessageShow');
+      quizResult.style.display = 'block';
+      contMessage.textContent = '❌ Incorrect';
+      //Since the result div is set to display none initially, styling has to be loaded from javascript
+      contMessage.style.textAlign = 'center';
+      nextBtn.disabled = false;
     }
+  }
+});
+
+//Display the next question / quiz result on click of next
+nextBtn.addEventListener('click', () => {
+  if (!nextBtn.disabled) {
     // regardless of above block, value of currentQuiz increases by 1
     currentQuiz++;
 
@@ -97,5 +119,3 @@ submitBtn.addEventListener('click', () => {
     }
   }
 });
-
-// document.getElementById("myBtn").disabled;
