@@ -3,7 +3,7 @@ import quizData from '/quizQuestions.js';
 
 // bring in elements
 const quiz = document.getElementById('quiz');
-const answerEls = document.querySelectorAll('.answer');
+const answerEls = document.querySelectorAll('input[type=radio]');
 const questionEl = document.getElementById('question');
 const a_text = document.getElementById('a_text');
 const b_text = document.getElementById('b_text');
@@ -68,9 +68,11 @@ function getSelected() {
   return answer;
 }
 
-//Enable the submit button once user selects an answer
-$("input[name='answer']").click(function () {
-  submitBtn.disabled = false;
+// enable submit button after selection of answer
+answerEls.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    submitBtn.disabled = false;
+  });
 });
 
 // add event listener to submit button
